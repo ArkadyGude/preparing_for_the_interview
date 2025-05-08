@@ -50,4 +50,7 @@ if __name__ == '__main__':
         '[[{())}]'
     ]
     for collection in balanced_list + unbalanced_list:
-        print(f'{collection:30}{checking_balance(collection)}')
+        if checking_balance(collection):
+            print(f'{collection:35}{'Сбалансированно'}')
+        else:
+            print(f'{collection:35}{'Несбалансированно'}')
